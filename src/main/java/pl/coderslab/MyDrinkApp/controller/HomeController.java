@@ -11,4 +11,19 @@ public class HomeController {
         return "/home";
     }
 
+    @GetMapping("/dashboard")
+    public String dashboard() {
+        return "dashboard";
+    }
+
+    @GetMapping("/description")
+    public String showDescription() {
+        return "description";
+    }
+
+    @GetMapping("/monthDrink")
+    public String drinkOfMonth() {
+        return "drinkOfMonth";
+    }
+
 }
