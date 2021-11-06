@@ -30,7 +30,7 @@ public class AdminController {
             return "/registration";
         }
         adminDao.createAdmin(admin);
-        return "redirect:/home";
+        return "redirect:/";
     }
 }
 
