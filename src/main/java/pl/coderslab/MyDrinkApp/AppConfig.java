@@ -22,9 +22,9 @@ import java.util.Locale;
 import java.util.Set;
 
 @Configuration
-@ComponentScan
+@ComponentScan("pl.coderslab")
 @EnableTransactionManagement
-@EnableJpaRepositories
+@EnableJpaRepositories(basePackages = "pl.coderslab.MyDrinkApp")
 public class AppConfig {
 
     @Bean(name="localeResolver")
