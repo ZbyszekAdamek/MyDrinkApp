@@ -2,11 +2,11 @@ package pl.coderslab.MyDrinkApp.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import pl.coderslab.DrinkApp.dao.DrinkDao;
-import pl.coderslab.DrinkApp.dao.SoftDrinkDao;
-import pl.coderslab.DrinkApp.entity.Admin;
-import pl.coderslab.DrinkApp.entity.Drink;
-import pl.coderslab.DrinkApp.entity.SoftDrink;
+import pl.coderslab.MyDrinkApp.dao.DrinkDao;
+import pl.coderslab.MyDrinkApp.dao.SoftDrinkDao;
+import pl.coderslab.MyDrinkApp.entity.Admin;
+import pl.coderslab.MyDrinkApp.entity.Drink;
+import pl.coderslab.MyDrinkApp.entity.SoftDrink;
 import pl.coderslab.MyDrinkApp.dao.AdminDao;
 
 import java.util.Optional;
