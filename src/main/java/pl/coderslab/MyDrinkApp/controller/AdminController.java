@@ -1,11 +1,11 @@
-package pl.coderslab.DrinkApp.controller;
+package pl.coderslab.MyDrinkApp.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
-import pl.coderslab.DrinkApp.dao.AdminDao;
 import pl.coderslab.DrinkApp.entity.Admin;
+import pl.coderslab.MyDrinkApp.dao.AdminDao;
 
 import javax.validation.Valid;
 
@@ -18,7 +18,7 @@ public class AdminController {
         this.adminDao = adminDao;
     }
 
-    @GetMapping("/register")
+/*    @GetMapping("/register")
     public String registerForm(Model model) {
         model.addAttribute("admin", new Admin());
         return "/registration";
@@ -31,6 +31,6 @@ public class AdminController {
         }
         adminDao.createAdmin(admin);
         return "redirect:/home";
-    }
+    }*/
 }
 
