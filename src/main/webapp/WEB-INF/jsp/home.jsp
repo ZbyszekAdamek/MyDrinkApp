@@ -67,7 +67,7 @@
                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Wybierz swój styl
                             </div>
                             <%--<div class="h5 mb-0 font-weight-bold text-gray-800">$40,000</div>--%>
-                            <img src="/theme/img/alko.jpg" width="200" height="100" alt="alkohol">
+                            <img src="/theme/img/wines.jpg" width="200" height="100" alt="alkohol">
                         </div>
                         <div class="col-auto">
                             <i class="fas fa-calendar fa-2x text-gray-300"></i>
@@ -135,8 +135,8 @@
                     </div>
                     <!-- Card Body -->
                     <div class="card-body">
-                        <img src="/theme/img/pornstar.jpg" width="200" height="250" alt="pornstar">
-                        <h2>PORNSTAR MARTINI</h2>
+                        <img src="/theme/img/MARGARITA.jpg" width="200" height="250" alt="pornstar">
+                        <h2>STRAWBERRY MARGARITA</h2>
                         <%--<div class="chart-pie pt-4 pb-2">
                             <canvas id="myPieChart"></canvas>
                         </div>--%>

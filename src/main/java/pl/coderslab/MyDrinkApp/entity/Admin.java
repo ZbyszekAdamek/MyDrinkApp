@@ -1,4 +1,4 @@
-package pl.coderslab.DrinkApp.entity;
+package pl.coderslab.MyDrinkApp.entity;
 
 import javax.persistence.*;
 import java.util.HashSet;
@@ -16,7 +16,7 @@ public class Admin {
     private String password;
 
     @OneToMany(mappedBy = "admin", cascade = CascadeType.ALL)
-    private Set<pl.coderslab.DrinkApp.entity.Drink> drinks = new HashSet<>();
+    private Set<pl.coderslab.MyDrinkApp.entity.Drink> drinks = new HashSet<>();
 
     public Admin(String firstName, String lastName,
                  String email, String password) {

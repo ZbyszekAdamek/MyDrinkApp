@@ -1,4 +1,4 @@
-package pl.coderslab.DrinkApp.entity;
+package pl.coderslab.MyDrinkApp.entity;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -7,7 +7,7 @@ import javax.validation.constraints.NotNull;
 @Table(name = "softs")
 public class SoftDrink {
 
-    public SoftDrink(long id, String name, String ingredients, String description, String preparationTime, String priceLevel, pl.coderslab.DrinkApp.entity.Admin admin) {
+    public SoftDrink(long id, String name, String ingredients, String description, String preparationTime, String priceLevel, pl.coderslab.MyDrinkApp.entity.Admin admin) {
         this.id = id;
         this.name = name;
         this.ingredients = ingredients;
@@ -28,13 +28,13 @@ public class SoftDrink {
     @ManyToOne
     @NotNull
     @JoinColumn(name = "admin_id")
-    private pl.coderslab.DrinkApp.entity.Admin admin;
+    private pl.coderslab.MyDrinkApp.entity.Admin admin;
 
-    public pl.coderslab.DrinkApp.entity.Admin getAdmin() {
+    public pl.coderslab.MyDrinkApp.entity.Admin getAdmin() {
         return admin;
     }
 
-    public void setAdmin(pl.coderslab.DrinkApp.entity.Admin admin) {
+    public void setAdmin(pl.coderslab.MyDrinkApp.entity.Admin admin) {
         this.admin = admin;
     }
 

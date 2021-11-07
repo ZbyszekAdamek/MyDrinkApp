@@ -3,7 +3,7 @@ package pl.coderslab.MyDrinkApp.dao;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-import pl.coderslab.DrinkApp.entity.Admin;
+import pl.coderslab.MyDrinkApp.entity.Admin;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
