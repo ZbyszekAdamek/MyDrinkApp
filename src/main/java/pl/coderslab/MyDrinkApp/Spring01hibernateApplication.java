@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class DrinkappApplication {
+public class Spring01hibernateApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DrinkappApplication.class, args);
+		SpringApplication.run(Spring01hibernateApplication.class, args);
 	}
 
 }
