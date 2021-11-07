@@ -1,10 +1,10 @@
-package pl.coderslab.MyDrinkApp.dao;
+package pl.coderslab.DrinkApp.dao;
 
 
 import org.springframework.stereotype.Repository;
-import pl.coderslab.MyDrinkApp.entity.Admin;
-import pl.coderslab.MyDrinkApp.entity.Drink;
-import pl.coderslab.MyDrinkApp.entity.SoftDrink;
+import pl.coderslab.DrinkApp.entity.Admin;
+import pl.coderslab.DrinkApp.entity.Drink;
+import pl.coderslab.DrinkApp.entity.SoftDrink;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
