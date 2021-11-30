@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import pl.coderslab.DrinkApp.dao.SoftDrinkDao;
-import pl.coderslab.DrinkApp.entity.SoftDrink;
+import pl.coderslab.MyDrinkApp.dao.SoftDrinkDao;
+import pl.coderslab.MyDrinkApp.entity.SoftDrink;
 
 
 import java.util.Arrays;

@@ -1,10 +1,9 @@
-package pl.coderslab.DrinkApp.dao;
+package pl.coderslab.MyDrinkApp.dao;
 
 
 import org.springframework.stereotype.Repository;
-import pl.coderslab.DrinkApp.entity.Admin;
-import pl.coderslab.DrinkApp.entity.Drink;
-import pl.coderslab.DrinkApp.entity.SoftDrink;
+import pl.coderslab.MyDrinkApp.entity.Drink;
+import pl.coderslab.MyDrinkApp.entity.SoftDrink;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -41,19 +40,6 @@ public class SoftDrinkDao {
 
     public SoftDrink findById(long id) {
         return entityManager.find(SoftDrink.class, id);
-    }
-
-    public List<Drink> findAllForGivenUser(Admin user) {
-        Query query = entityManager.createQuery("SELECT s from SoftDrink s where s.admin=: user").setParameter("user",user);
-        return query.getResultList();
-    }
-
-    public Optional<SoftDrink> findByIdForCurrentUser(Admin user, long idToFind) {
-        Query query = entityManager.createQuery("SELECT s from SoftDrink s where s.admin=: user and s.id = :id")
-                .setParameter("user",user)
-                .setParameter("id",idToFind);
-        SoftDrink softDrink = (SoftDrink) query.getResultList().get(0);
-        return Optional.ofNullable(softDrink);
     }
 
 }

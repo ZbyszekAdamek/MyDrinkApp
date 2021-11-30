@@ -8,7 +8,7 @@ public class HomeController {
 
     @GetMapping("/")
     public String initAddFom() {
-        return "/home";
+        return "home";
     }
 
     @GetMapping("/dashboard")

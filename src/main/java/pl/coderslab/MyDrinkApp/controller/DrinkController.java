@@ -7,8 +7,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import pl.coderslab.DrinkApp.dao.DrinkDao;
-import pl.coderslab.DrinkApp.entity.Drink;
+import pl.coderslab.MyDrinkApp.dao.DrinkDao;
+import pl.coderslab.MyDrinkApp.entity.Drink;
+import pl.coderslab.MyDrinkApp.dao.DrinkDao;
+import pl.coderslab.MyDrinkApp.entity.Drink;
+import pl.coderslab.MyDrinkApp.service.DrinksManagementsService;
 
 
 import java.util.Arrays;
@@ -17,7 +20,7 @@ import java.util.List;
 @Controller
 public class DrinkController {
 
-/*    private final DrinkDao drinkDao;
+    private final DrinkDao drinkDao;
     private final DrinksManagementsService drinksManagementsService;
 
     public DrinkController(DrinkDao drinkDao, DrinksManagementsService drinksManagementsService) {
@@ -52,7 +55,7 @@ public class DrinkController {
             return "/add";
         }
         try {
-            drinksManagementsService.saveDrinkForCurrentUser(drink);
+            drinksManagementsService.saveDrink(drink);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -89,7 +92,7 @@ public class DrinkController {
     @GetMapping("/list")
     public String showAll(Model model) {
         try {
-            model.addAttribute("allDrinks", drinksManagementsService.findAllForUser());
+            model.addAttribute("allDrinks", drinksManagementsService.findAllDrinks());
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -99,11 +102,11 @@ public class DrinkController {
     @GetMapping("/recipe")
     public String showRecipe(Model model, int idToFind) {
         try {
-            model.addAttribute("drink", drinksManagementsService.findDrinkForUserById(idToFind));
+            model.addAttribute("drink", drinksManagementsService.findDrinkById(idToFind));
         } catch (Exception e) {
             e.printStackTrace();
         }
         return "drinkRecipe";
-    }*/
+    }
 }
 

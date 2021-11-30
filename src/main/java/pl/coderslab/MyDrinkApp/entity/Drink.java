@@ -1,4 +1,4 @@
-package pl.coderslab.DrinkApp.entity;
+package pl.coderslab.MyDrinkApp.entity;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -15,29 +15,17 @@ public class Drink {
     private String description;
     private String preparationTime;
     private String priceLevel;
-    @ManyToOne
-    @NotNull
-    @JoinColumn(name = "admin_id")
-    private pl.coderslab.DrinkApp.entity.Admin admin;
 
 
-    public Drink(long id, String name, String ingredients, String description, String preparationTime, String priceLevel, pl.coderslab.DrinkApp.entity.Admin user) {
+    public Drink(long id, String name, String ingredients, String description, String preparationTime, String priceLevel) {
         this.id = id;
         this.name = name;
         this.ingredients = ingredients;
         this.description = description;
         this.preparationTime = preparationTime;
         this.priceLevel = priceLevel;
-        this.admin = user;
     }
 
-    public pl.coderslab.DrinkApp.entity.Admin getAdmin() {
-        return admin;
-    }
-
-    public void setAdmin(pl.coderslab.DrinkApp.entity.Admin user) {
-        this.admin = user;
-    }
 
 
     public String getDescription() {
@@ -101,7 +89,6 @@ public class Drink {
                 ", description='" + description + '\'' +
                 ", preparationTime='" + preparationTime + '\'' +
                 ", priceLevel='" + priceLevel + '\'' +
-                ", admin=" + admin +
                 '}';
     }
 }

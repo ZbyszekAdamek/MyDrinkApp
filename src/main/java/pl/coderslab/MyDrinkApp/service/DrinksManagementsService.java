@@ -2,71 +2,48 @@ package pl.coderslab.MyDrinkApp.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import pl.coderslab.DrinkApp.dao.DrinkDao;
-import pl.coderslab.DrinkApp.dao.SoftDrinkDao;
-import pl.coderslab.DrinkApp.entity.Admin;
-import pl.coderslab.DrinkApp.entity.Drink;
-import pl.coderslab.DrinkApp.entity.SoftDrink;
-import pl.coderslab.MyDrinkApp.dao.AdminDao;
+import pl.coderslab.MyDrinkApp.dao.DrinkDao;
+import pl.coderslab.MyDrinkApp.dao.SoftDrinkDao;
+import pl.coderslab.MyDrinkApp.entity.Drink;
+import pl.coderslab.MyDrinkApp.entity.SoftDrink;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
 public class DrinksManagementsService {
 
-/*    private final DrinkDao drinkDao;
+    private final DrinkDao drinkDao;
     private final SoftDrinkDao softDrinkDao;
-    private final AdminDao adminDao;
 
+    public List findAllDrinks(){
+        return drinkDao.findAll();
+    }
 
-    public void saveDrinkForCurrentUser(Drink drink) throws Exception {
-        Admin user = findUser();
-        drink.setAdmin(user);
+    public void saveDrink(Drink drink) {
         drinkDao.createDrink(drink);
     }
 
-    public void saveSoftForCurrentUser(SoftDrink softDrink) throws Exception {
-        Admin user = findUser();
-        softDrink.setAdmin(user);
+    public void saveSoft(SoftDrink softDrink) {
         softDrinkDao.createSoftDrink(softDrink);
     }
 
-    public Object findAllForUser() throws Exception {
-        Admin user = findUser();
-        return drinkDao.findAllForGivenUser(user);
-    }
 
-    public Object findAllSoftsForUser() throws Exception {
-        Admin user = findUser();
-        return softDrinkDao.findAllForGivenUser(user);
-    }
-
-    public Drink findDrinkForUserById(int idToFind) throws Exception {
-        Admin user = findUser();
-        Optional<Drink> optionalDrink = drinkDao.findByIdForCurrentUser(user, idToFind);
+    public Drink findDrinkById(int idToFind) throws Exception {
+        Optional<Drink> optionalDrink = Optional.ofNullable(drinkDao.findById(idToFind));
         if (optionalDrink.isPresent()){
             return optionalDrink.get();
         }
         throw new Exception("User not found");
     }
 
-    public SoftDrink findSoftForUserById(int idToFind) throws Exception {
-        Admin user = findUser();
-        Optional <SoftDrink> optionalSoftDrink = softDrinkDao.findByIdForCurrentUser(user, idToFind);
+    public SoftDrink findSoftById(int idToFind) throws Exception {
+        Optional <SoftDrink> optionalSoftDrink = Optional.ofNullable(softDrinkDao.findById(idToFind));
         if(optionalSoftDrink.isPresent()){
             return optionalSoftDrink.get();
         }
         throw new Exception("User not found");
     }
-
-    private Admin findUser() throws Exception {
-        String email = SecurityContextHolder.getContext().getAuthentication().getName();
-        Optional<Admin> admin = adminDao.findByEmail(email);
-        if (admin.isPresent()){
-            return admin.get();
-        }
-        throw new Exception("User not found");
-    }*/
 }
 

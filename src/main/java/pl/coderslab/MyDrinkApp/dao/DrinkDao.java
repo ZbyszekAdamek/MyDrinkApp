@@ -1,14 +1,13 @@
-package pl.coderslab.DrinkApp.dao;
+package pl.coderslab.MyDrinkApp.dao;
 
 import org.springframework.stereotype.Repository;
-import pl.coderslab.DrinkApp.entity.Admin;
-import pl.coderslab.DrinkApp.entity.Drink;
+import pl.coderslab.MyDrinkApp.entity.Drink;
+
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 import javax.transaction.Transactional;
 import java.util.List;
-import java.util.Optional;
 
 @Repository
 @Transactional
@@ -40,18 +39,9 @@ public class DrinkDao {
     public Drink findById(long id) {
         return entityManager.find(Drink.class, id);
     }
-
-    public List<Drink> findAllForGivenUser(Admin user) {
-        Query query = entityManager.createQuery("SELECT d from Drink d where d.admin=: user").setParameter("user",user);
+    public List findAll(){
+        Query query = entityManager.createQuery("SELECT d from Drink d");
         return query.getResultList();
-    }
-
-    public Optional<Drink> findByIdForCurrentUser(Admin user, long idToFind) {
-        Query query = entityManager.createQuery("SELECT d from Drink d where d.admin=: user and d.id = :id")
-                .setParameter("user",user)
-                .setParameter("id",idToFind);
-        Drink drink = (Drink) query.getResultList().get(0);
-        return Optional.ofNullable(drink);
     }
 }
 
