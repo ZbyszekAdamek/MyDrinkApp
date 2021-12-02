@@ -20,6 +20,9 @@ public class DrinksManagementsService {
     public List findAllDrinks(){
         return drinkDao.findAll();
     }
+    public List findAllSofts(){
+        return softDrinkDao.findAllSofts();
+    }
 
     public void saveDrink(Drink drink) {
         drinkDao.createDrink(drink);

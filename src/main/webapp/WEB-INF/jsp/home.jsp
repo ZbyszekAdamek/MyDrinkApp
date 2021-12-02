@@ -53,7 +53,7 @@
                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Wybierz swój styl
                             </div>
                             <%--<div class="h5 mb-0 font-weight-bold text-gray-800">$40,000</div>--%>
-                            <img src="/theme/img/wines.jpg" width="200" height="100" alt="alkohol">
+                            <img src="/theme/img/wines.jpg" width="250" height="150" alt="alkohol">
                         </div>
                         <div class="col-auto">
                             <i class="fas fa-calendar fa-2x text-gray-300"></i>

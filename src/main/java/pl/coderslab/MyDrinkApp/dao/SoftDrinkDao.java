@@ -41,5 +41,9 @@ public class SoftDrinkDao {
     public SoftDrink findById(long id) {
         return entityManager.find(SoftDrink.class, id);
     }
+    public List findAllSofts(){
+        Query query = entityManager.createQuery("SELECT s from SoftDrink s");
+        return query.getResultList();
+    }
 
 }

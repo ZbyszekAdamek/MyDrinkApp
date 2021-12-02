@@ -23,12 +23,12 @@
 <title>Przepis na drink</title>
 </head>
 <body>
-<img src="/theme/img/pornstar.jpg" width="200" height="250" alt="pornstar">
+<img src="/theme/img/margarita.jpg" width="200" height="250" alt="margarita">
 
-<h2>Pornstar Martini<h2></h2><br>
-    Ulubiony drink krakowskiej bananowej młodzieży. Marakujowa domieszka egzotyki wymieszana
-    z wódką waniliową i paroma kroplami prosecco. Do tego sok z cytryny i można się
-    wznieść wyżej niż na krakowski Szkieletor. Smacznego!
+<h2>Strawberry Margarita<h2></h2><br>
+    Prawdziwie orzeźwiający drink, łączący w sobie słodycz mrożonych truskawek z mieszanką kilku koktajli:
+    triple sec i tequili z syropem cukrowym.
+    Pełny kwiat barw określa wyciśnięty sok z cytryny oraz szczypta soli. Smacznego!
 
 
     <%@ include file="footer.jsp" %>

@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import pl.coderslab.MyDrinkApp.dao.SoftDrinkDao;
 import pl.coderslab.MyDrinkApp.entity.SoftDrink;
+import pl.coderslab.MyDrinkApp.service.DrinksManagementsService;
 
 
 import java.util.Arrays;
@@ -17,7 +18,7 @@ import java.util.List;
 @Controller
 public class SoftDrinkController {
 
-  /*  private final SoftDrinkDao softDrinkDao;
+    private final SoftDrinkDao softDrinkDao;
     private final DrinksManagementsService drinksManagementsService;
 
     public SoftDrinkController(SoftDrinkDao softDrinkDao, DrinksManagementsService drinksManagementsService) {
@@ -47,10 +48,10 @@ public class SoftDrinkController {
     @PostMapping("/addSoft")
     public String persistDrink(SoftDrink softDrink, BindingResult result) {
         if (result.hasErrors()) {
-            return "/addSoft";
+            return "/addSoftRecipe";
         }
         try {
-            drinksManagementsService.saveSoftForCurrentUser(softDrink);
+            drinksManagementsService.saveSoft(softDrink);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -66,7 +67,7 @@ public class SoftDrinkController {
     @PostMapping("/editSoft")
     public String merge(SoftDrink softDrink) {
         softDrinkDao.update(softDrink);
-        return "redirect:/list";
+        return "redirect:/softList";
     }
 
     @GetMapping("/removeSoft")
@@ -87,7 +88,7 @@ public class SoftDrinkController {
     @GetMapping("/softList")
     public String showAll(Model model) {
         try {
-            model.addAttribute("allSofts", drinksManagementsService.findAllSoftsForUser());
+            model.addAttribute("allSofts", drinksManagementsService.findAllSofts());
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -97,11 +98,11 @@ public class SoftDrinkController {
     @GetMapping("/softRecipe")
     public String showRecipe(Model model, int idToFind) {
         try {
-            model.addAttribute("drink", drinksManagementsService.findSoftForUserById(idToFind));
+            model.addAttribute("soft", drinksManagementsService.findSoftById(idToFind));
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return "drinkRecipe";
-    }*/
+        return "softDrinkRecipe";
+    }
 }
 
